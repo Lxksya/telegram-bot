@@ -67,7 +67,7 @@ async def handle_admin_menu(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text(
             '📝 Введите данные фильма в формате:\n\n'
             '<code>Название; Дата1 Время1, Дата2 Время2,...</code>\n\n'
-            'Пример:\n<code>Интерстеллар; 2023-12-15 19:00, 2023-12-16 21:00</code>',
+            'Пример:\n<code>Интерстеллар; 2025-12-15 19:00, 2025-12-16 21:00</code>',
             parse_mode='HTML'
         )
         return ADD_MOVIE
@@ -189,7 +189,7 @@ async def edit_session_handler(update: Update, context: ContextTypes.DEFAULT_TYP
             f'Сеансы фильма <b>{movie_title}</b>:\n{sessions_text}\n\n'
             'Введите номер сеанса, новую дату и время в формате:\n'
             '<code>номер, дата, время</code>\n\n'
-            'Пример: <code>0, 2023-12-20, 18:00</code>',
+            'Пример: <code>0, 2025-12-20, 18:00</code>',
             parse_mode='HTML'
         )
         context.user_data['edit_movie'] = movie_title
@@ -210,7 +210,7 @@ async def edit_session_handler(update: Update, context: ContextTypes.DEFAULT_TYP
             await update.message.reply_text(
                 '❌ Ошибка формата. Используйте:\n'
                 '<code>номер, дата, время</code>\n'
-                'Пример: <code>0, 2023-12-20, 18:00</code>',
+                'Пример: <code>0, 2025-12-20, 18:00</code>',
                 parse_mode='HTML'
             )
             return EDIT_SESSION
